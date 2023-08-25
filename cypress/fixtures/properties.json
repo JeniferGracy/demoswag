@@ -1,0 +1,20 @@
+{
+    "username":"#user-name",
+    "password":"#password",
+    "loginbutton":"#login-button",
+    "clickmenubutton":"#react-burger-menu-btn",
+    "logoutbutton":"#logout_sidebar_link:visible",
+    "geterror":"//h3[@data-test='error']",
+    "selectdropdown":"select.product_sort_container",
+    "selectproduct":"div.inventory_item_label",
+    "clickaddtocartlink":"#shopping_cart_container",
+    "clickcheckout":"#checkout",
+    "firstname":"#first-name",
+    "lastname":"#last-name",
+    "postalcode":"#postal-code",
+    "clickcontinuebutton":"#continue",
+    "clickfinishbutton":"#finish",
+    "thankyouforyourorder":"//h2[contains(text(),'Thank you for your order!')]",
+    "products":"span.title"
+    
+  }

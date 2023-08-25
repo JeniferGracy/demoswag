@@ -1,0 +1,201 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 5,
+    "pending": 1,
+    "failures": 0,
+    "start": "2023-02-15T07:01:41.396Z",
+    "end": "2023-02-15T07:02:21.557Z",
+    "duration": 40161,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 16.666666666666664,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c8202476-327a-4593-ac78-93613faaebf4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Swaglabs\\SwagLabs.js",
+      "file": "cypress\\e2e\\Swaglabs\\SwagLabs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "38d52fd1-45b1-4369-9050-bd21001a2e16",
+          "title": "Swaglabs",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify all the users are able to login successfully",
+              "fullTitle": "Swaglabs Verify all the users are able to login successfully",
+              "timedOut": null,
+              "duration": 17562,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Standard User\ncy.login(this.data.standarduser, this.data.password);\ncy.logout();\n//problem_user\ncy.login(this.data.probelemuser, this.data.password);\ncy.logout();\n//performance_glitch_user\ncy.login(this.data.perfomanceglitchuser, this.data.password);\ncy.logout();\n//locked_out_user\ncy.login(this.data.lockedoutuser, this.data.password);\ncy.lockedoutUserError(this.data.lockedusererror);",
+              "err": {},
+              "uuid": "9ed3b47b-232c-4658-bb5b-827a3d72f16a",
+              "parentUUID": "38d52fd1-45b1-4369-9050-bd21001a2e16",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Standard User, search and add multiple products and complete the purchase and shipping flow",
+              "fullTitle": "Swaglabs Verify Standard User, search and add multiple products and complete the purchase and shipping flow",
+              "timedOut": null,
+              "duration": 4725,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(this.data.standarduser, this.data.password);\ncy.selectProduct(this.data.productname);\ncy.purchaseShippingFlow(this.data.firstname, this.data.lastname, this.data.postalcode, this.data.successmessage);\ncy.logout();",
+              "err": {},
+              "uuid": "30006965-fa95-4a6a-b623-3e4b8b1bbf55",
+              "parentUUID": "38d52fd1-45b1-4369-9050-bd21001a2e16",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Locked user, verify the locked scenario",
+              "fullTitle": "Swaglabs Locked user, verify the locked scenario",
+              "timedOut": null,
+              "duration": 1495,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//locked_out_user\ncy.login(this.data.lockedoutuser, this.data.password);\ncy.lockedoutUserError(this.data.lockedusererror);",
+              "err": {},
+              "uuid": "2c5d7949-333e-4d63-bd73-2625636bd182",
+              "parentUUID": "38d52fd1-45b1-4369-9050-bd21001a2e16",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Problem user, verify able to login and see products but problem popup is shown",
+              "fullTitle": "Swaglabs Problem user, verify able to login and see products but problem popup is shown",
+              "timedOut": null,
+              "duration": 3801,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//problem_user\ncy.login(this.data.probelemuser, this.data.password);\n//cy.wait(3000)\nproblemhomepage.getProducts();\ncy.selectProduct(this.data.problemuserproductname);\ncy.problemUserPurchaseShippingFlow(this.data.firstname, this.data.lastname, this.data.postalcode, this.data.lastnameerror);\ncy.on(\"window:alert\", str => {\n  expect(str).to.contains(this.data.popuptext);\n});",
+              "err": {},
+              "uuid": "e90b103f-33db-479a-83b8-ddd5d3ba1ef3",
+              "parentUUID": "38d52fd1-45b1-4369-9050-bd21001a2e16",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "performance_glitch_user, able to login and delay is observed on the login screen",
+              "fullTitle": "Swaglabs performance_glitch_user, able to login and delay is observed on the login screen",
+              "timedOut": null,
+              "duration": 8022,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.normalUser(this.data.standarduser, this.data.password);\ncy.glitchUser(this.data.perfomanceglitchuser, this.data.password);\ncy.delay();",
+              "err": {},
+              "uuid": "5bbaa136-e559-492a-8345-822205404306",
+              "parentUUID": "38d52fd1-45b1-4369-9050-bd21001a2e16",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify all the users are able to login successfully",
+              "fullTitle": "Swaglabs Verify all the users are able to login successfully",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.login(this.data.standarduser, this.data.password);",
+              "err": {},
+              "uuid": "f5d28a80-b068-461d-aba5-64ab426cbc17",
+              "parentUUID": "38d52fd1-45b1-4369-9050-bd21001a2e16",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9ed3b47b-232c-4658-bb5b-827a3d72f16a",
+            "30006965-fa95-4a6a-b623-3e4b8b1bbf55",
+            "2c5d7949-333e-4d63-bd73-2625636bd182",
+            "e90b103f-33db-479a-83b8-ddd5d3ba1ef3",
+            "5bbaa136-e559-492a-8345-822205404306"
+          ],
+          "failures": [],
+          "pending": [
+            "f5d28a80-b068-461d-aba5-64ab426cbc17"
+          ],
+          "skipped": [],
+          "duration": 35605,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

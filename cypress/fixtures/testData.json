@@ -1,0 +1,18 @@
+{
+    "standarduser":"standard_user",
+    "lockedoutuser":"locked_out_user",
+    "probelemuser":"problem_user",
+    "perfomanceglitchuser":"performance_glitch_user",
+    "password":"secret_sauce",
+    "firstname":"Jenifer",
+    "lastname":"Gracy",
+    "postalcode":"600033",
+    "productname" : ["Sauce Labs Onesie","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket"],
+    "successmessage" : "Thank you for your order!",
+    "problemuserproductname":["Sauce Labs Bolt T-Shirt","Sauce Labs Onesie"],
+    "lastnameerror":"Error: Last Name is required",
+    "lockedusererror":"Epic sadface:",
+    "popuptext":"The password you just used was found in a data breach. Google Password Manager recommends changing your password now"
+    
+    
+  }
